@@ -5,7 +5,7 @@ Pulse Wave is a lightweight Python scaffolding designed for developing REST APIs
 ## Features
 
 - **Database Configuration**: Easily configure your database through a `.env` file.
-- **Local Server**: Run a local server similar to `php artisan serve`.
+- **Local Server**: Run a local server.
 - **Routing**: Supports GET, POST, PUT, and DELETE methods, with dynamic routing.
 - **Models**: Includes a directory for models with support for table relationships.
 - **Controllers**: Directory for controllers with typical controller behaviors.
