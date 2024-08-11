@@ -15,28 +15,30 @@ Pulse Wave is a lightweight Python scaffolding designed for developing REST APIs
 - **Seeder**: Populate the `users` table with dummy data.
 
 ## Project Structure
-pulsewave/
-│
-├── app/
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── init.py
-│ └── main.py
-│
-├── seeders/
-│ └── users_faker.py
-│
-├── scripts/
-│ └── generate.py
-│
-├── migrations/
-│ └── versions/
-│
-├── .env.example
-├── .gitignore
-├── alembic.ini
-├── Makefile
-├── pulsewave.py
-├── requirements.txt
-└── README.md
+```
+    pulsewave/
+    │
+    ├── app/
+    │ ├── controllers/
+    │ ├── middleware/
+    │ ├── models/
+    │ ├── init.py
+    │ └── main.py
+    │
+    ├── seeders/
+    │ └── users_faker.py
+    │
+    ├── scripts/
+    │ └── generate.py
+    │
+    ├── migrations/
+    │ └── versions/
+    │
+    ├── .env.example
+    ├── .gitignore
+    ├── alembic.ini
+    ├── Makefile
+    ├── pulsewave.py
+    ├── requirements.txt
+    └── README.md
+```
