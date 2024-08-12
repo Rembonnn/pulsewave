@@ -1,5 +1,3 @@
-# Pulse Wave
-
 <p align="center">
   <a href="http://github.com/Rembonnn" target="blank"><img src="https://github.com/Rembonnn/pulsewave/blob/master/public/pulsewave.jpg" alt="Pulsewave" /></a>
 </p>
