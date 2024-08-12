@@ -1,5 +1,9 @@
 # Pulse Wave
 
+<p align="center">
+  <a href="http://github.com/Rembonnn" target="blank"><img src="https://github.com/Rembonnn/pulsewave/blob/master/public/pulsewave.jpg" alt="Pulsewave" /></a>
+</p>
+
 Pulsewave is a lightweight Python scaffolding designed for developing REST APIs with simplicity and flexibility. It includes features like environment-based database configuration, routing, CRUD & Complex operations, middleware, and JWT authentication.
 ```bash
 https://github.com/Rembonnn/pulsewave.git
@@ -18,6 +22,10 @@ https://github.com/Rembonnn/pulsewave.git
 
 ## Contributing
 Thank you for considering contributing to the Pulsewave! For the contribution guide you can contact us at: info@rembon.com / daycodestudioproject@gmail.com
+
+## References
+- Postman Collection: https://documenter.getpostman.com/view/19955217/2sA3s4k9qA
+- Installation Guide (Notion): https://mixed-diamond-226.notion.site/Pulsewave-Documentation-6b0e682ca4f546dbb68cce3380b1b05b?pvs=4
 
 ## License
 Pulsewave is licensed under the MIT License. See the [LICENSE file](https://github.com/Rembonnn/pulsewave/blob/master/LICENSE.md) for more information.
