@@ -23,11 +23,13 @@ def users_faker():
             id=uuid.uuid4(),
             name=fake.name(),
             email=fake.unique.email(),
-            password=fake.password(),
             email_verified_at=fake.date_time_this_year(),
             created_at=fake.date_time_this_year(),
             updated_at=fake.date_time_this_year()
         )
+
+        user.set_password(raw_password='password')
+
         session.add(user)
 
     session.commit()
@@ -35,4 +37,5 @@ def users_faker():
 if __name__ == "__main__":
     # Jalankan seeder
     users_faker()
+    
     print("30 users have been seeded.")
