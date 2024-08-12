@@ -1,5 +1,5 @@
 # app/controllers/user_controller.py
-from flask import jsonify, request
+from flask import request
 from app.models.user import User
 from config.database import SessionLocal
 from app.functions import response
