@@ -16,6 +16,7 @@ app = Flask(__name__)
 app.config['ENV'] = FLASK_ENV
 app.config['DEBUG'] = os.getenv('DEBUG', 'True').lower() == 'true'
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['JSON_SORT_KEYS'] = False
 
 # Inisialisasi route
 init_routes(app)

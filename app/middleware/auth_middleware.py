@@ -10,25 +10,25 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 def token_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        token = request.headers.get('Authorization')
+        auth_header = request.headers.get('Authorization', None)
 
-        if not token:
-            return jsonify({'message': 'Token is missing'}), 403
+        if auth_header:
+            try:
+                token_type, token = auth_header.split()
+                if token_type != 'Bearer':
+                    return jsonify({'message': 'Invalid token type'}), 403
+            except ValueError:
+                return jsonify({'message': 'Invalid Authorization header format'}), 403
 
-        try:
-            payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
-            user_id = payload.get('user_id')
-
-            session = SessionLocal()
-            user = session.query(User).filter_by(id=user_id).first()
-
-            if not user:
+            try:
+                decoded_token = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+                request.user = decoded_token
+            except jwt.ExpiredSignatureError:
+                return jsonify({'message': 'Token has expired'}), 403
+            except jwt.InvalidTokenError:
                 return jsonify({'message': 'Invalid token'}), 403
-
-        except jwt.ExpiredSignatureError:
-            return jsonify({'message': 'Token has expired'}), 403
-        except jwt.InvalidTokenError:
-            return jsonify({'message': 'Invalid token'}), 403
+        else:
+            return jsonify({'message': 'Token is missing'}), 403
 
         return f(*args, **kwargs)
 
