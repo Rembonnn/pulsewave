@@ -42,6 +42,9 @@ generate-controller:
 generate-middleware:
 	$(PYTHON) $(GENERATOR) middleware
 
+generate-jwt-secret:
+	$(PYTHON) scripts/jwt_key.py
+
 check-env:
 	@if [ ! -f $(ENV_FILE) ]; then \
 		echo "$(ENV_FILE) file not found. Please create it with the correct database configuration."; \
@@ -50,4 +53,4 @@ check-env:
 
 all: check-env init-migrations autogenerate upgrade seed
 
-.PHONY: install serve init-migrations revision upgrade autogenerate create-db drop-db seed-users-data generate-model generate-controller generate-middleware check-env all
+.PHONY: install serve init-migrations revision upgrade autogenerate create-db drop-db seed-users-data generate-model generate-controller generate-middleware check-env all generate-jwt-secret
