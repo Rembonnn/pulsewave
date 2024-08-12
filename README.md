@@ -2,7 +2,7 @@
   <a href="http://github.com/Rembonnn" target="blank"><img src="https://github.com/Rembonnn/pulsewave/blob/master/public/pulsewave.jpg" alt="Pulsewave" /></a>
 </p>
 
-Pulsewave is a lightweight Python scaffolding designed for developing REST APIs with simplicity and flexibility. It includes features like environment-based database configuration, routing, CRUD & Complex operations, middleware, and JWT authentication.
+Pulsewave is a lightweight Python scaffolding designed for developing REST APIs with simplicity and flexibility. It includes features like environment-based database configuration, routing, CRUD & Complex operations, middleware, and JWT authentication. Best practice of pulsewave usage is for micro services.
 ```bash
 https://github.com/Rembonnn/pulsewave.git
 ```
