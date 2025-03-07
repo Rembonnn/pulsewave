@@ -3,6 +3,7 @@ import jwt
 from datetime import datetime, timedelta, timezone
 
 SECRET_KEY = os.getenv('SECRET_KEY')
+ALGORITHM = os.getenv('ALGORITHM')
 
 def create_token(user_id):
     expiration = datetime.now(timezone.utc) + timedelta(minutes=15)
@@ -12,4 +13,4 @@ def create_token(user_id):
         'exp': expiration
     }
 
-    return jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+    return jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
